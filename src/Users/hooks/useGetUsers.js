@@ -13,14 +13,13 @@ useEffect(()=>{
             console.log({result});
             setUsers(result.users);
             setLoading(false);
-        }
-        catch(error){
+        }catch(error){
             setError(`Error: ${error.message}`)
             setLoading(false)
         }
     };
     fetchUsers();
 }, []);
-return {users,error,loading}
+return{users,error,loading}
 };
 
